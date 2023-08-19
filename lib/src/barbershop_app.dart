@@ -1,4 +1,3 @@
-import 'package:asyncstate/observers/async_navigator_observer.dart';
 import 'package:asyncstate/widget/async_state_builder.dart';
 import 'package:dw_barbershop/src/core/ui/barbershop_theme.dart';
 import 'package:dw_barbershop/src/core/ui/widgets/barbershop_loader.dart';
@@ -21,7 +20,7 @@ class BarbershopApp extends StatelessWidget {
             navigatorObservers: [asyncNavigatorObserver],
             routes: {
               '/': (BuildContext _) => const SplashPage(),
-              '/auth/login': (_) => LoginPage(),
+              '/auth/login': (_) => const LoginPage(),
             },
           );
         });

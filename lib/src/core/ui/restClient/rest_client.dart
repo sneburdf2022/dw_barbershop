@@ -4,7 +4,7 @@ import 'package:dio/io.dart';
 final class RestClient extends DioForNative {
   RestClient()
       : super(BaseOptions(
-            baseUrl: 'http://2804:14c:65c0:59d0::1001:8080/',
+            baseUrl: 'http://localhost:8080',
             connectTimeout: const Duration(seconds: 10),
             receiveTimeout: const Duration(seconds: 60))) {
     interceptors.addAll([

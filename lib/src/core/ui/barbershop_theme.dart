@@ -10,15 +10,25 @@ sealed class BarbershopTheme {
   );
   static ThemeData themeData = ThemeData(
       useMaterial3: true,
+      appBarTheme: const AppBarTheme(
+        centerTitle: true,
+        iconTheme: IconThemeData(color: ColorsConstants.brow),
+        backgroundColor: Colors.white,
+        titleTextStyle: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            color: Colors.black,
+            fontFamily: FontsContansts.fontFamily),
+      ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white,
-        labelStyle: TextStyle(color: ColorsConstants.grey),
+        labelStyle: const TextStyle(color: ColorsConstants.grey),
         border: _defaultInputBorder,
         enabledBorder: _defaultInputBorder,
         focusedBorder: _defaultInputBorder,
         errorBorder: _defaultInputBorder.copyWith(
-          borderSide: BorderSide(color: ColorsConstants.red),
+          borderSide: const BorderSide(color: ColorsConstants.red),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(

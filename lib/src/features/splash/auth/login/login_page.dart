@@ -1,5 +1,4 @@
 import 'package:dw_barbershop/src/core/ui/constants.dart';
-import 'package:dw_barbershop/src/core/ui/helpers/form_helper.dart';
 import 'package:dw_barbershop/src/core/ui/helpers/messages.dart';
 import 'package:dw_barbershop/src/features/splash/auth/login/login_state.dart';
 import 'package:dw_barbershop/src/features/splash/auth/login/login_vm.dart';
@@ -155,18 +154,21 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           )
                         ],
                       ),
-                      const Align(
+                      Align(
                         alignment: Alignment.bottomCenter,
-                        child: Stack(
-                          children: [
-                            Text(
-                              'Criar conta',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500),
-                            )
-                          ],
+                        child: InkWell(
+                          //link sem formatação
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed('/auth/register/user');
+                          },
+                          child: const Text(
+                            'Criar conta',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
                         ),
                       ),
                     ],

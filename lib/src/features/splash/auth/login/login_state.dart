@@ -1,13 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-enum LoginStateStatus { inital, error, admLogin, employeeLogin }
+enum LoginStateStatus { initial, error, admLogin, employeeLogin }
 
 class LoginState {
   final LoginStateStatus status;
   final String? errorMessage;
 
-  LoginState.initial() : this(status: LoginStateStatus.inital);
+  LoginState.initial() : this(status: LoginStateStatus.initial);
 
   LoginState({
     required this.status,

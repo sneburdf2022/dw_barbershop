@@ -36,12 +36,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     // somenteo o loginVmProvider nosso state
     ref.listen(loginVmProvider, (_, state) {
       switch (state) {
-        case LoginState(status: LoginStateStatus.inital):
+        case LoginState(status: LoginStateStatus.initial):
           break;
         case LoginState(status: LoginStateStatus.error, :final errorMessage?):
           Messages.showError(errorMessage, context);
         case LoginState(status: LoginStateStatus.error):
-          Messages.showError('Erro ao relaizar login', context);
+          Messages.showError('Erro ao realizar login', context);
         case LoginState(status: LoginStateStatus.admLogin):
           Navigator.of(context)
               .pushNamedAndRemoveUntil('/home/adm', (route) => false);

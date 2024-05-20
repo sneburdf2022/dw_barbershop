@@ -1,3 +1,4 @@
-# dw_barbershop - projeto de imersão em flutter
+# Projeto de imersão em flutter
+## App de barbearia
 
 Utilizado para iniciar o desenvolvimento em flutter.
